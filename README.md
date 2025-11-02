@@ -80,7 +80,7 @@ Grant motion permission when prompted.
 
 ### 🧭 Controls
 
-Desktop: mouse orbit via OrbitControls.
+Desktop: Mouse controsl to orbit the scene via OrbitControls; drag with the mouse to move the camera around
 
 Mobile (HTTPS): DeviceOrientationControls rotates the camera with phone movement.
 
