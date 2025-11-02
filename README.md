@@ -14,9 +14,9 @@ npm i
 2) Run dev server
 npm run dev
 
-Open the printed URL (e.g. http://localhost:5173\).
+Open the given URL (e.g. http://localhost:5173\), this will open a tab on a browser to host the application.
 
-You should see a cube. On desktop, drag with the mouse to orbit.
+The "Testing Cube" will appear if a .splat model is not utilised
 
 ---
 
