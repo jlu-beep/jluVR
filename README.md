@@ -86,40 +86,9 @@ Mobile (HTTPS): DeviceOrientationControls rotates the camera with phone movement
 
 The app shows a small overlay button on iOS to request motion permission (required by Safari).
 
----
-
-### 🧪 Optional: Native WebXR VR Button
-
-You can add a VR button without @react-three/xr:
-
-import { Canvas, useThree } from '@react-three/fiber'
-import { useEffect } from 'react'
-import { VRButton } from 'three/examples/jsm/webxr/VRButton.js'
-
-function EnableXR() {
-  const { gl } = useThree()
-  useEffect(() => {
-    gl.xr.enabled = true
-    const btn = VRButton.createButton(gl)
-    document.body.appendChild(btn)
-    return () => { try { document.body.removeChild(btn) } catch {} }
-  }, [gl])
-  return null
-}
-
-export default function App() {
-  return (
-    <Canvas camera={{ position: [0, 1.6, 3], fov: 70 }}>
-      <EnableXR />
-      {/* scene... */}
-    </Canvas>
-  )
-}
-
-
-The button will say “WebXR not available” on devices/browsers without XR.
 
 ---
+
 
 ### 🟡 Loading a Gaussian Splat
 
