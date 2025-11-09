@@ -1,7 +1,10 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { VRButton } from 'three/examples/jsm/webxr/VRButton.js'
+
+import GyroLook from './components/GyroLook'
+import MotionToggle from './components/MotionToggle'
 
 function EnableXR() {
   const { gl } = useThree()
@@ -17,6 +20,7 @@ function EnableXR() {
 }
 
 export default function App() {
+  const [magicWindow, setMagicWindow] = useState(false)
   return (
     <Canvas camera={{ position: [0, 1.6, 3], fov: 70 }}>
       <EnableXR />
@@ -38,7 +42,13 @@ export default function App() {
       </mesh>
 
       {/* mouse orbit */}
-      <OrbitControls enablePan={false} enableDamping dampingFactor={0.05} />
+
+      <GyroLook enabled={magicWindow} smoothing={0.12} />
+
+
+      <OrbitControls enabled={!magicWindow} enablePan={!magicWindow} enableDamping dampingFactor={0.05} />
     </Canvas>
+
+      <MotionToggle enabled={magicWindow} onChange={setMagicWindow} />
   )
 }
