@@ -4,7 +4,6 @@
 Light-weight starter code for viewing 3D in the browser with React Three Fiber.
 
 Designed to work on desktop (mouse orbit) and on phones using gyroscope (no headset required).
-Optional: native WebXR VR button (for devices that support it).
 
 ---
 
@@ -129,7 +128,6 @@ three ^0.160
 
 @react-three/fiber, @react-three/drei
 
-Optional: native WebXR via three/examples/jsm/webxr/VRButton.js
 
 ---
 
