@@ -85,7 +85,9 @@ Mobile (HTTPS): DeviceOrientationControls rotates the camera with phone movement
 
 The app shows a small overlay button on iOS to request motion permission (required by Safari).
 
+
 ---
+
 
 ### 🟡 Loading a Gaussian Splat
 
